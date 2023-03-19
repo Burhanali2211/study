@@ -38,11 +38,11 @@ nav {
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid #ff004f;
+    border: 1px solid #ff0000;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
-    color: white;
+    color: rgb(206, 31, 31);
     transition: background 0.5s;
 
 }
@@ -81,10 +81,9 @@ form .btn2 {
 
 .logo {
     width: 115px;
-    border-radius: 50%;
-    border-color: #02ff02;
+    border-color: #00ff00;
+    transition: 0.8ms;
 }
-
 nav ul li {
     display: inline-block;
     list-style: none;
@@ -122,6 +121,24 @@ nav ul li button::after {
 nav ul li button::hover:after {
     width: 100%;
 
+}
+.btnLogin-popup{
+    width: 133px;
+    height: 50px;
+    background:none;
+    border-color: #ff0000;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #ffffff;
+    font-weight: 500;
+    margin-left: 10px;
+    transition: .4s;
+}
+.btnLogin-popup:hover{
+    background: #f31432;
+    color: #ffffff;
+    border-color: #27292b;
 }
 
 nav ul li a::after {
@@ -161,6 +178,7 @@ html {
 
 nav ul li align-self:hover::after {
     width: 100%;
+
 }
 
 .header-text {
@@ -169,8 +187,8 @@ nav ul li align-self:hover::after {
 }
 
 .header-text b {
-    color: #02ff02;
-    font-size: 30px;
+    color: #00ff00;
+    font-size: 40px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -184,8 +202,15 @@ nav ul li align-self:hover::after {
 }
 
 h2 {
-    margin-left: 40%;
+    margin-left: 45%;
     font-size: 45px;
+    transition: 0.6s;
+}
+
+h2:hover {
+    transform: translateY(-2px);
+    border-color: #02ff02;
+    border-radius: 5px;
 }
 
 /* -----------about------------ */
@@ -243,15 +268,38 @@ nav .fas {
 
 .contact-right {
     flex-basis: 60%;
+    color: white;
 }
 
+
+/* .contact-right input:invalid{
+    animation: shake 300ms;
+    color: rgb(248, 246, 246);
+}
+@keyframes shake{
+    25%{
+        transform: translateX(4px);
+    }
+    50%{
+        transform: translateX(-4px);
+    }
+    75%{
+        transform: translateX(4px);
+    }
+} */
 .contact-left p {
     margin-top: 30px;
 }
 
 .btn.btn2 {
     display: inline-block;
-    background: #ff004f;
+    background: #080808;
+}
+
+.btn.btn2:hover {
+    background: #f50066;
+    color: #ffffff;
+    box-shadow: 0 0 12px;
 }
 
 .copyright {
@@ -279,52 +327,54 @@ nav .fas {
 }
 
 .social-icons a:hover {
-    color: #ff004f;
     transform: translateY(-5px);
 }
 
 .notes l {
-    width: 100%;
-    display: inline;
-    padding: 100px;
-    width: fit-content;
-    border-radius: px;
+    /* display: inline;
+    padding: 136px;
     text-decoration: none;
     color: white;
-    transition: background 0.5s;
+    transition: background 0.5s; */
+    display: flex;
+    padding: 70px 10% 0;
+    text-decoration: none;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
 }
-.notes l:hover {
-    color: #70510c;
-}
-
 
 
 @media only screen and (max-width: 600px) {
 
 
     .header-text {
-        margin-top: 10%;
+        margin-top: 50%;
+        font-size: 35px;
     }
 
     .header-text h1 {
         font-size: 35px;
     }
-
+    
     nav .fas {
         display: block;
         font-size: 25px;
     }
 
+    .logo {
+        width: 125px;
+        transition: 0.8ms;
+    }
+
     nav ul {
-        background: rgb(245, 0, 53);
-        font-size: 30px;
-        font-weight: 600;
+        background: rgb(255, 0, 40);
         position: fixed;
         top: 0;
         right: -200px;
         width: 200px;
         height: 100vh;
-        padding-top: 53px;
+        padding-top: 50px;
         z-index: 2;
         transition: right 1s;
 
@@ -399,15 +449,10 @@ nav .fas {
     }
 
     .copyright {
-        text-align: center;
-        width: 100%;
-        margin-left: 120PX;
-        color: #fffdfd;
-        padding: 2px;
-        background: none;
-        font-weight: 300px;
-        margin-top: 20px;
+        font-size: 14px;
     }
+
+
 }
 
 #msg {
